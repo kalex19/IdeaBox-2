@@ -1,0 +1,18 @@
+.cardTitle {
+  font-family: cursive;
+  font-size: 2em;
+  padding-left: 15%;
+}
+
+.cardDes {
+  width: 50%;
+  color: white;
+  font-weight: bold;
+  padding-left: 15%;
+}
+
+.cardBtn {
+  border-radius: 50%;
+  margin-left: 5%;
+  margin-bottom: 2%;
+}

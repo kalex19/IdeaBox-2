@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
+import '../styles/Card.css';
 
-const Cards = ({ title, descrition, id, deleteIdea }) => {
+const Cards = ({ title, description, id, deleteIdea }) => {
 	return (
 		<div>
-			<h1> {title} </h1> <p> {descrition} </p>
-			<button onClick={() => deleteIdea(id)}>🗑</button>
+			<h1 className="cardTitle"> {title} </h1> <p className="cardDes"> {description} </p>
+			<button className="cardBtn" onClick={() => deleteIdea(id)}>
+				🗑
+			</button>
 		</div>
 	);
 };

@@ -48,7 +48,7 @@ class App extends Component {
 	render() {
 		return (
 			<div className="App">
-				<h1>My Design Ideas</h1>
+				<h1 className="appHeader">My Design Ideas</h1>
 				<Form addIdea={this.addIdea} />
 				<Ideas ideas={this.state.ideas} deleteIdea={this.deleteIdea} />
 			</div>

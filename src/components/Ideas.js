@@ -1,22 +1,23 @@
 import React, { Component } from 'react';
 import Card from './Cards';
+import '../styles/Ideas.css';
 
-const Ideas = ({ ideas }) => {
+const Ideas = ({ ideas, deleteIdea }) => {
 	const ideasCard = ideas.map(idea => {
 		return (
-			<div>
+			<div className="cardContainer">
 				<Card
 					id={idea.id}
 					title={idea.title}
 					description={idea.description}
 					key={idea.id}
-					deleteIdea={idea.deleteIdea}
-				/>
+					deleteIdea={deleteIdea}
+				/>{' '}
 			</div>
 		);
 	});
 
-	return <div>{ideasCard}</div>;
+	return <div> {ideasCard} </div>;
 };
 
 export default Ideas;

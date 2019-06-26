@@ -1,0 +1,21 @@
+.appForm {
+  display: flow-root;
+  width: 30%;
+  margin: 0 35%;
+}
+
+input {
+  height: 30px;
+  border: 2px black solid;
+  margin: 5px;
+  text-align: center;
+  font-size: 1em;
+  width: 100%;
+}
+
+.submitBtn {
+  background-color: pink;
+  padding: 10px;
+  width: 100%;
+  margin: 9px;
+}

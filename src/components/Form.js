@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../styles/Form.css';
 
 export class Form extends Component {
 	constructor() {
@@ -18,6 +19,7 @@ export class Form extends Component {
 	submitForm = e => {
 		e.preventDefault();
 		const newIdea = {
+			...this.state,
 			id: Date.now(),
 			completed: false
 		};
@@ -35,23 +37,23 @@ export class Form extends Component {
 	render() {
 		return (
 			<div>
-				<form action="submit">
-					<input
-						type="text"
-						placeholder="title"
-						name="title"
-						value={this.state.title}
-						onChange={e => this.handleChange(e)}
-					/>
+				<form className="appForm">
+					<input type="text" placeholder="title" name="title" value={this.state.title} onChange={this.handleChange} /> {' '}
 					<input
 						type="text"
 						placeholder="description"
 						name="description"
 						value={this.state.description}
 						onChange={e => this.handleChange(e)}
-					/>
-					<button onSubmit={e => this.submitNewIdea(e)}>Submit</button>
-				</form>
+					/>{' '}
+					{' '}
+					<button className="submitBtn" onSubmit={e => this.submitNewIdea(e)}>
+						{' '}
+						Submit {' '}
+					</button>{' '}
+					{' '}
+				</form>{' '}
+				{' '}
 			</div>
 		);
 	}
